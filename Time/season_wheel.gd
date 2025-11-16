@@ -52,8 +52,8 @@ func _on_new_day() -> void:
 
 func update_cursor_position() ->void:
 	var currentAngle = float(yDay)/maxDay * 2*PI
-	timeCursor.position.x = wheelBorder.texture.get_size().x * -sin(currentAngle) * radiusFactor
-	timeCursor.position.y = wheelBorder.texture.get_size().y * -cos(currentAngle) * radiusFactor
+	timeCursor.position.x = wheelBorder.texture.get_size().x/2 - timeCursor.texture.get_size().x/2 +wheelBorder.texture.get_size().x * -sin(currentAngle) * radiusFactor
+	timeCursor.position.y = wheelBorder.texture.get_size().y/2 - timeCursor.texture.get_size().y/2 +wheelBorder.texture.get_size().y * -cos(currentAngle) * radiusFactor
 	timeCursor.rotation = -currentAngle
 
 func setSpeedFast() -> void:

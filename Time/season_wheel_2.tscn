@@ -1,0 +1,97 @@
+[gd_scene load_steps=21 format=3 uid="uid://bj7k4rlxubmd"]
+
+[ext_resource type="Texture2D" uid="uid://megno8k5kqmi" path="res://Ressources/Seasons/SpringWheel.png" id="1_tlt2h"]
+[ext_resource type="Texture2D" uid="uid://c3ykx1keicrg8" path="res://Ressources/Seasons/SummerWheel.png" id="2_hi1pb"]
+[ext_resource type="Script" uid="uid://d27i0oq6ci20p" path="res://Time/Month/base_month.gd" id="2_lkbyx"]
+[ext_resource type="Texture2D" uid="uid://cc7cy8nc31qqe" path="res://Ressources/Seasons/AutumnWheel.png" id="3_bxrd8"]
+[ext_resource type="Resource" uid="uid://bko5irfe8d41l" path="res://Time/Month/Basics/Martius.tres" id="3_luhbs"]
+[ext_resource type="Texture2D" uid="uid://ca3aodompggxn" path="res://Ressources/Seasons/WinterWheel.png" id="4_k3c2l"]
+[ext_resource type="Resource" uid="uid://dv4efjm80s2t" path="res://Time/Month/Basics/Aprilis.tres" id="4_ujygm"]
+[ext_resource type="Resource" uid="uid://bhxat5h8odaad" path="res://Time/Month/Basics/Maius.tres" id="5_8si1w"]
+[ext_resource type="Texture2D" uid="uid://blibksu5l4r8p" path="res://Ressources/Seasons/Colorwheel_Outside.png" id="5_n8672"]
+[ext_resource type="Texture2D" uid="uid://b3v77hgv6iov8" path="res://Ressources/Seasons/Cursor.png" id="6_6oxgj"]
+[ext_resource type="Resource" uid="uid://bbyhj8o2udk83" path="res://Time/Month/Basics/Iunius.tres" id="6_pps24"]
+[ext_resource type="Script" uid="uid://dimkj3g878oij" path="res://Time/season_wheel.gd" id="7_hi1pb"]
+[ext_resource type="Resource" uid="uid://cysunuy8h32gs" path="res://Time/Month/Basics/Quintilis.tres" id="7_uxsji"]
+[ext_resource type="Resource" uid="uid://caiq2ghyd62ny" path="res://Time/Month/Basics/Sextilis.tres" id="8_x78fq"]
+[ext_resource type="Resource" uid="uid://cos15rs5rna3g" path="res://Time/Month/Basics/September.tres" id="9_mnrbo"]
+[ext_resource type="Resource" uid="uid://3kg56ddiwvnt" path="res://Time/Month/Basics/October.tres" id="10_afipo"]
+[ext_resource type="Resource" uid="uid://jb07vplpr7ak" path="res://Time/Month/Basics/November.tres" id="11_cirg2"]
+[ext_resource type="Resource" uid="uid://bwml3cnhnlyea" path="res://Time/Month/Basics/December.tres" id="12_5y0a2"]
+[ext_resource type="Resource" uid="uid://bq8ubq3id0ou2" path="res://Time/Month/Basics/Ianuarius.tres" id="13_qr08d"]
+[ext_resource type="Resource" uid="uid://ck4ubsphfgso3" path="res://Time/Month/Basics/Februarius.tres" id="14_c4a3b"]
+
+[node name="season_wheel" type="MarginContainer"]
+offset_right = 40.0
+offset_bottom = 40.0
+size_flags_vertical = 3
+script = ExtResource("7_hi1pb")
+Months = Array[ExtResource("2_lkbyx")]([ExtResource("3_luhbs"), ExtResource("4_ujygm"), ExtResource("5_8si1w"), ExtResource("6_pps24"), ExtResource("7_uxsji"), ExtResource("8_x78fq"), ExtResource("9_mnrbo"), ExtResource("10_afipo"), ExtResource("11_cirg2"), ExtResource("12_5y0a2"), ExtResource("13_qr08d"), ExtResource("14_c4a3b")])
+
+[node name="SpringBar" type="TextureProgressBar" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+max_value = 120.0
+value = 120.0
+fill_mode = 4
+radial_initial_angle = 270.0
+radial_fill_degrees = 90.0
+texture_progress = ExtResource("1_tlt2h")
+
+[node name="SummerBar" type="TextureProgressBar" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+max_value = 120.0
+value = 120.0
+fill_mode = 4
+radial_initial_angle = 180.0
+radial_fill_degrees = 90.0
+texture_progress = ExtResource("2_hi1pb")
+
+[node name="AutumnBar" type="TextureProgressBar" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+max_value = 120.0
+value = 120.0
+fill_mode = 4
+radial_initial_angle = 90.0
+radial_fill_degrees = 90.0
+texture_progress = ExtResource("3_bxrd8")
+
+[node name="WinterBar" type="TextureProgressBar" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+max_value = 120.0
+value = 120.0
+fill_mode = 4
+radial_fill_degrees = 90.0
+texture_progress = ExtResource("4_k3c2l")
+
+[node name="Border" type="TextureRect" parent="."]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("5_n8672")
+
+[node name="Cursor" type="TextureRect" parent="Border"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -16.0
+offset_top = -16.0
+offset_right = 16.0
+offset_bottom = 16.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset = Vector2(16, 16)
+texture = ExtResource("6_6oxgj")
+
+[node name="wheel_elements" type="Control" parent="."]
+layout_mode = 2
