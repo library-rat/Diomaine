@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://b721s845c170b"]
+
+[ext_resource type="PackedScene" uid="uid://bjqmnp31hr2vh" path="res://Manifestation/basic_manifestation.tscn" id="1_gddrv"]
+[ext_resource type="Script" uid="uid://dtc0qxpi1ma0p" path="res://Manifestation/RessourceInterraction/fruitful_harvest.gd" id="2_3grg4"]
+
+[node name="FruitfulHarvest" unique_id=914102041 instance=ExtResource("1_gddrv")]
+script = ExtResource("2_3grg4")

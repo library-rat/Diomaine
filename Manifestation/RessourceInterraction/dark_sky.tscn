@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://hitiy7ipfiu5"]
+
+[ext_resource type="PackedScene" uid="uid://bjqmnp31hr2vh" path="res://Manifestation/basic_manifestation.tscn" id="1_wdk3p"]
+[ext_resource type="Script" uid="uid://4rva6m7gkn1p" path="res://Manifestation/RessourceInterraction/dark_sky.gd" id="2_8uipu"]
+
+[node name="DarkSky" unique_id=888409126 instance=ExtResource("1_wdk3p")]
+script = ExtResource("2_8uipu")

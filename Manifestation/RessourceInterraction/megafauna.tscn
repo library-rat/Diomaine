@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://20ddp157vpkm"]
+
+[ext_resource type="PackedScene" uid="uid://bjqmnp31hr2vh" path="res://Manifestation/basic_manifestation.tscn" id="1_d0uma"]
+[ext_resource type="Script" uid="uid://wmo5a27rl0iw" path="res://Manifestation/RessourceInterraction/megafauna.gd" id="2_38xid"]
+
+[node name="Megafauna" unique_id=996023898 instance=ExtResource("1_d0uma")]
+script = ExtResource("2_38xid")
