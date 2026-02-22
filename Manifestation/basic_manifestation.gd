@@ -1,15 +1,16 @@
-extends Control
-class_name Manifestation
+@abstract
+class_name Manifestation extends Control
+
 
 @export var types : Dictionary[Enums.ElementType,int]
 var god : God
+var cooldown : int = 30 #in number of day
 @onready var description :RichTextLabel = $Description/RichTextLabel
 
 func act():
 	for type in types :
 		if check_elements():
 			pay_cost_elements()
-
 
 func _on_button_mouse_entered() -> void:
 	$DescriptionTimer.start(0.7)
