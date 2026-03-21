@@ -26,19 +26,26 @@ layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = 387.0
-offset_top = 200.0
-offset_right = 387.0
-offset_bottom = 200.0
+offset_right = -1152.0
+offset_bottom = -648.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_qnvmk")
 Months = Array[ExtResource("2_yshb2")]([ExtResource("3_hsemk"), ExtResource("4_j32nt"), ExtResource("5_sdf6p"), ExtResource("6_hsemk"), ExtResource("6_cirec"), ExtResource("8_yshb2"), ExtResource("9_sq4xy"), ExtResource("10_wv1g3"), ExtResource("11_hy18y"), ExtResource("12_fo5oc"), ExtResource("13_sitib"), ExtResource("14_wly8y")])
 
 [node name="SpringBar" type="TextureProgressBar" parent="."]
-layout_mode = 0
-offset_right = 128.0
-offset_bottom = 128.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -63.0
+offset_right = 64.0
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
 max_value = 120.0
 value = 120.0
 fill_mode = 4
@@ -47,9 +54,18 @@ radial_fill_degrees = 90.0
 texture_progress = ExtResource("1_psv80")
 
 [node name="SummerBar" type="TextureProgressBar" parent="."]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
 max_value = 120.0
 value = 120.0
 fill_mode = 4
@@ -58,9 +74,18 @@ radial_fill_degrees = 90.0
 texture_progress = ExtResource("2_g34w2")
 
 [node name="AutumnBar" type="TextureProgressBar" parent="."]
-layout_mode = 0
-offset_right = 128.0
-offset_bottom = 128.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
 max_value = 120.0
 value = 120.0
 fill_mode = 4
@@ -69,9 +94,18 @@ radial_fill_degrees = 90.0
 texture_progress = ExtResource("3_mt31h")
 
 [node name="WinterBar" type="TextureProgressBar" parent="."]
-layout_mode = 0
-offset_right = 128.0
-offset_bottom = 128.0
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -64.0
+offset_top = -64.0
+offset_right = 64.0
+offset_bottom = 64.0
+grow_horizontal = 2
+grow_vertical = 2
 max_value = 120.0
 value = 120.0
 fill_mode = 4
@@ -79,7 +113,6 @@ radial_fill_degrees = 90.0
 texture_progress = ExtResource("4_cq06x")
 
 [node name="Border" type="Sprite2D" parent="."]
-position = Vector2(64, 64)
 texture = ExtResource("5_3ah3k")
 
 [node name="Cursor" type="Sprite2D" parent="Border"]

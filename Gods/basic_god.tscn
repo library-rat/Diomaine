@@ -1,15 +1,14 @@
-[gd_scene load_steps=8 format=3 uid="uid://jwalewdj5rdg"]
+[gd_scene format=3 uid="uid://jwalewdj5rdg"]
 
 [ext_resource type="Script" uid="uid://lv2xh5rokyl0" path="res://Gods/basic_god.gd" id="1_s2xkm"]
-[ext_resource type="PackedScene" uid="uid://bjqmnp31hr2vh" path="res://Manifestation/basic_manifestation.tscn" id="2_pcuni"]
 [ext_resource type="PackedScene" uid="uid://kxsjfne6d8u1" path="res://Manifestation/Fire/blaze.tscn" id="3_3intb"]
 [ext_resource type="PackedScene" uid="uid://c8j8j8hb5a6hr" path="res://Manifestation/Fire/talking_fires.tscn" id="4_kpwww"]
-[ext_resource type="PackedScene" uid="uid://20ddp157vpkm" path="res://Manifestation/megafauna.tscn" id="4_ov470"]
-[ext_resource type="Script" uid="uid://wmo5a27rl0iw" path="res://Manifestation/megafauna.gd" id="6_jesg1"]
+[ext_resource type="PackedScene" uid="uid://20ddp157vpkm" path="res://Manifestation/RessourceInterraction/megafauna.tscn" id="4_ov470"]
+[ext_resource type="Script" uid="uid://wmo5a27rl0iw" path="res://Manifestation/RessourceInterraction/megafauna.gd" id="6_jesg1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_427yo"]
 
-[node name="BasicGod" type="Control"]
+[node name="BasicGod" type="Control" unique_id=1983317581]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -19,7 +18,7 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_s2xkm")
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=649589218]
 layout_mode = 1
 anchors_preset = 14
 anchor_top = 0.5
@@ -30,85 +29,76 @@ offset_bottom = 88.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=1177363858]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer" unique_id=926016856]
 layout_mode = 2
 
-[node name="Abundance" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
-layout_mode = 2
-alignment = 1
-
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/Abundance"]
-layout_mode = 2
-text = "0"
-
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer/Abundance"]
-layout_mode = 2
-
-[node name="Devastation" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Abundance" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=920019262]
 layout_mode = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/Devastation"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/Abundance" unique_id=650146733]
 layout_mode = 2
 text = "0"
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer/Devastation"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer/Abundance" unique_id=1832693504]
 layout_mode = 2
 
-[node name="Malice" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Devastation" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1151466561]
 layout_mode = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/Malice"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/Devastation" unique_id=593850568]
 layout_mode = 2
 text = "0"
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer/Malice"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer/Devastation" unique_id=992766148]
 layout_mode = 2
 
-[node name="Might" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Malice" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=181454140]
 layout_mode = 2
 alignment = 1
 
-[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/Might"]
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/Malice" unique_id=800059888]
 layout_mode = 2
 text = "0"
 
-[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer/Might"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer/Malice" unique_id=1706759460]
 layout_mode = 2
 
-[node name="Devotion" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer"]
+[node name="Might" type="HBoxContainer" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1362092107]
+layout_mode = 2
+alignment = 1
+
+[node name="Label" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer/Might" unique_id=1002761609]
 layout_mode = 2
 text = "0"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/HBoxContainer"]
+[node name="TextureRect" type="TextureRect" parent="VBoxContainer/HBoxContainer/VBoxContainer/Might" unique_id=1466249447]
+layout_mode = 2
+
+[node name="Devotion" type="Label" parent="VBoxContainer/HBoxContainer/VBoxContainer" unique_id=1541200954]
+layout_mode = 2
+text = "0"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/HBoxContainer" unique_id=53239976]
 sprite_frames = SubResource("SpriteFrames_427yo")
 
-[node name="Heraults" type="HBoxContainer" parent="VBoxContainer"]
+[node name="Heraults" type="HBoxContainer" parent="VBoxContainer" unique_id=23610704]
 layout_mode = 2
 
-[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=907663830]
 layout_mode = 2
 columns = 3
 
-[node name="BasicIntervention" parent="VBoxContainer/GridContainer" instance=ExtResource("2_pcuni")]
+[node name="Blaze" parent="VBoxContainer/GridContainer" unique_id=747981401 instance=ExtResource("3_3intb")]
 layout_mode = 2
 
-[node name="BasicIntervention2" parent="VBoxContainer/GridContainer" instance=ExtResource("2_pcuni")]
-layout_mode = 2
-
-[node name="BasicIntervention3" parent="VBoxContainer/GridContainer" instance=ExtResource("2_pcuni")]
-layout_mode = 2
-
-[node name="Blaze" parent="VBoxContainer/GridContainer" instance=ExtResource("3_3intb")]
-layout_mode = 2
-
-[node name="Megafauna" parent="VBoxContainer/GridContainer" instance=ExtResource("4_ov470")]
-layout_mode = 2
-
-[node name="TalkingFires" parent="VBoxContainer/GridContainer" instance=ExtResource("4_kpwww")]
+[node name="TalkingFires" parent="VBoxContainer/GridContainer" unique_id=656836912 instance=ExtResource("4_kpwww")]
 layout_mode = 2
 script = ExtResource("6_jesg1")
+
+[node name="Megafauna" parent="VBoxContainer/GridContainer" unique_id=996023898 instance=ExtResource("4_ov470")]
+layout_mode = 2

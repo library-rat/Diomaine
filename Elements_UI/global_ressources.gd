@@ -8,7 +8,7 @@ class_name GlobalRessources
 @onready var playButton : Button = $HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer/PlayButton
 @onready var fastButton : Button = $HBoxContainer/VBoxContainer2/VBoxContainer/HBoxContainer/FastButton
 
-@onready var SeasonWheel : Control = $HBoxContainer/VBoxContainer2/Season_Wheel
+@onready var SeasonWheel : Control = $HBoxContainer/VBoxContainer2/season_wheel
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
