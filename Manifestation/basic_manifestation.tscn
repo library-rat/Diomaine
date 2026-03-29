@@ -1,18 +1,21 @@
-[gd_scene load_steps=2 format=3 uid="uid://bjqmnp31hr2vh"]
+[gd_scene format=3 uid="uid://bjqmnp31hr2vh"]
 
-[ext_resource type="Script" uid="uid://dqcq3glv23jb0" path="res://Manifestation/basic_manifestation.gd" id="1_l3uth"]
-
-[node name="BasicIntervention" type="Control"]
+[node name="BasicIntervention" type="Control" unique_id=357691357]
 custom_minimum_size = Vector2(80, 30)
 layout_mode = 3
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -15.0
+offset_right = 40.0
+offset_bottom = 15.0
 grow_horizontal = 2
 grow_vertical = 2
-script = ExtResource("1_l3uth")
 
-[node name="Button" type="Button" parent="."]
+[node name="Button" type="Button" parent="." unique_id=1795318376]
 custom_minimum_size = Vector2(80, 20)
 layout_mode = 1
 anchors_preset = 15
@@ -21,7 +24,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Description" type="Panel" parent="."]
+[node name="Description" type="Panel" parent="." unique_id=219415455]
 visible = false
 z_index = 10
 layout_mode = 0
@@ -30,7 +33,7 @@ offset_top = 16.0
 offset_right = 172.0
 offset_bottom = 135.0
 
-[node name="RichTextLabel" type="RichTextLabel" parent="Description"]
+[node name="RichTextLabel" type="RichTextLabel" parent="Description" unique_id=696794156]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -40,7 +43,7 @@ grow_vertical = 2
 bbcode_enabled = true
 text = "Descrition of the intervention"
 
-[node name="DescriptionTimer" type="Timer" parent="."]
+[node name="DescriptionTimer" type="Timer" parent="." unique_id=1820021647]
 one_shot = true
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
