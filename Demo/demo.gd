@@ -9,13 +9,22 @@ var manifestation_array = [
 
 const manifestation_button = preload("res://Demo/manifestation_button.tscn")
 func _ready() -> void:
-	var all_grid = get_node("Control/AllManifestation")
+	var all_grid = get_node("Control/AllManifestation/AllGrid")
 	for man in manifestation_array :
 		var button = manifestation_button.instantiate()
+		var temp = man.instantiate()
+		button.contained_manifestation = temp
+		button.add_child(temp)
+		temp.visible = false
+		#var test = temp.description
+		button.text = temp.name
 		button.manifestation_selected.connect(_on_manifestation_emitted)
 		all_grid.add_child(button)
 
-
-func _on_manifestation_emitted( choosen_button : Button):
-	get_node("Control/AllManifestation").remove_child(choosen_button)
-	get_node("Control/SelectedManifestation").add_child(choosen_button)
+func _on_manifestation_emitted( chosen_button : Button):
+	var label = Label.new()
+	var test = chosen_button.contained_manifestation
+	label.text = chosen_button.contained_manifestation.description_text
+	get_node("Control/AllManifestation/AllGrid").remove_child(chosen_button)
+	get_node("Control/SelectedManifestation/SelectedGrid").add_child(chosen_button)
+	get_node("Control/SelectedManifestation/SelectedGrid").add_child(label)

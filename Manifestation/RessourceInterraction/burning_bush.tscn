@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dh3slltfiqa7a"]
 
 [ext_resource type="PackedScene" uid="uid://bjqmnp31hr2vh" path="res://Manifestation/basic_manifestation.tscn" id="1_vg0cb"]
+[ext_resource type="Script" uid="uid://co3wb401k867f" path="res://Manifestation/RessourceInterraction/burning_bush.gd" id="2_yxm2u"]
 
 [node name="BurningBush" unique_id=1163845382 instance=ExtResource("1_vg0cb")]
-script = null
+script = ExtResource("2_yxm2u")

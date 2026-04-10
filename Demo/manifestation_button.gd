@@ -1,7 +1,7 @@
 extends Button
 signal manifestation_selected(button)
 
-var contained_manifestation : Manifestation
+var contained_manifestation : Control
 
 func _ready() -> void:
 	self.pressed.connect(_on_button_pressed)

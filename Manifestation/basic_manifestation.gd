@@ -3,9 +3,9 @@ class_name Manifestation extends Control
 
 var manifestation_name : String
 @export var types : Dictionary[Enums.ElementType,int]
-var god : God
-var cooldown : int = 30 #in number of day
-var description_text :String : set = _set_description_text
+@export var god : God
+@export var cooldown : int = 30 #in number of day
+@export var description_text :String : set = _set_description_text
 @onready var description :RichTextLabel = $Description/RichTextLabel
 
 func _set_description_text(new_description):
