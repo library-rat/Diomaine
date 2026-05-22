@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://ctrt0fbmujd17"]
+
+[ext_resource type="Theme" uid="uid://5fg65kj88jg7" path="res://Elements_UI/main_theme.tres" id="1_2r0ug"]
+[ext_resource type="PackedScene" uid="uid://cvtkvxccacde4" path="res://Elements_UI/ElementUI/cost_line.tscn" id="2_aapit"]
+[ext_resource type="Script" uid="uid://cp20x1g1a77pf" path="res://Elements_UI/ElementUI/panel_cost_lines.gd" id="2_f1i0h"]
+
+[node name="PanelCostLines" type="Panel" unique_id=664010856]
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = -65.0
+grow_horizontal = 2
+theme = ExtResource("1_2r0ug")
+script = ExtResource("2_f1i0h")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1814388722]
+layout_mode = 0
+offset_left = 13.0
+offset_top = 6.0
+offset_right = 118.0
+offset_bottom = 29.0
+scale = Vector2(0.5, 0.5)
+alignment = 1
+
+[node name="CostLine3" parent="VBoxContainer" unique_id=1381009129 instance=ExtResource("2_aapit")]
+layout_mode = 2
+
+[node name="CostLine4" parent="VBoxContainer" unique_id=585522336 instance=ExtResource("2_aapit")]
+layout_mode = 2

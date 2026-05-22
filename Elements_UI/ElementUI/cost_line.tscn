@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://cvtkvxccacde4"]
+
+[ext_resource type="Script" uid="uid://dpedusxclkvwt" path="res://Elements_UI/ElementUI/cost_line.gd" id="1_h0tsy"]
+[ext_resource type="Texture2D" uid="uid://bnobbt4tyk83v" path="res://Ressources/Elements/temporary_trickery.png" id="1_y3uc7"]
+
+[node name="CostLine" type="HBoxContainer" unique_id=1344235371]
+clip_contents = true
+offset_right = 140.0
+offset_bottom = 47.0
+script = ExtResource("1_h0tsy")
+
+[node name="Cost" type="Label" parent="." unique_id=108908839]
+clip_contents = true
+layout_mode = 2
+size_flags_horizontal = 3
+text = "0"
+horizontal_alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1929692186]
+layout_mode = 2
+texture = ExtResource("1_y3uc7")
+expand_mode = 3
+stretch_mode = 4
+
+[node name="Name" type="Label" parent="." unique_id=955602015]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Element"

@@ -2,11 +2,18 @@
 class_name Manifestation extends Control
 
 var manifestation_name : String
-@export var types : Dictionary[Enums.ElementType,int]
+@export var types : Dictionary[Enums.ElementType,int] : set = _set_types
 @export var god : God
 @export var cooldown : int = 30 #in number of day
 @export var description_text :String : set = _set_description_text
 @onready var description :RichTextLabel = $Description/RichTextLabel
+@onready var panel_cost_lines : Panel = $PanelCostLines
+
+func _set_types(new_dict) ->void:
+	types = new_dict
+	if(panel_cost_lines):
+		panel_cost_lines.set_cost_lines(types)
+	
 
 func _set_description_text(new_description):
 	description_text = new_description

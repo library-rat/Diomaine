@@ -1,10 +1,8 @@
 [gd_scene format=3 uid="uid://jwalewdj5rdg"]
 
 [ext_resource type="Script" uid="uid://lv2xh5rokyl0" path="res://Gods/basic_god.gd" id="1_s2xkm"]
-[ext_resource type="PackedScene" uid="uid://kxsjfne6d8u1" path="res://Manifestation/Fire/blaze.tscn" id="3_3intb"]
-[ext_resource type="PackedScene" uid="uid://c8j8j8hb5a6hr" path="res://Manifestation/Fire/talking_fires.tscn" id="4_kpwww"]
+[ext_resource type="PackedScene" uid="uid://dh3slltfiqa7a" path="res://Manifestation/RessourceInterraction/burning_bush.tscn" id="2_ov470"]
 [ext_resource type="PackedScene" uid="uid://20ddp157vpkm" path="res://Manifestation/RessourceInterraction/megafauna.tscn" id="4_ov470"]
-[ext_resource type="Script" uid="uid://wmo5a27rl0iw" path="res://Manifestation/RessourceInterraction/megafauna.gd" id="6_jesg1"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_427yo"]
 
@@ -93,12 +91,8 @@ layout_mode = 2
 layout_mode = 2
 columns = 3
 
-[node name="Blaze" parent="VBoxContainer/GridContainer" unique_id=747981401 instance=ExtResource("3_3intb")]
+[node name="BurningBush" parent="VBoxContainer/GridContainer" unique_id=1163845382 instance=ExtResource("2_ov470")]
 layout_mode = 2
-
-[node name="TalkingFires" parent="VBoxContainer/GridContainer" unique_id=656836912 instance=ExtResource("4_kpwww")]
-layout_mode = 2
-script = ExtResource("6_jesg1")
 
 [node name="Megafauna" parent="VBoxContainer/GridContainer" unique_id=996023898 instance=ExtResource("4_ov470")]
 layout_mode = 2

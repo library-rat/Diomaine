@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://bjqmnp31hr2vh"]
 
-[node name="BasicIntervention" type="Control" unique_id=357691357]
+[ext_resource type="PackedScene" uid="uid://ctrt0fbmujd17" path="res://Elements_UI/ElementUI/panel_cost_lines.tscn" id="1_l3uth"]
+
+[node name="BasicManifestation" type="Control" unique_id=357691357]
 custom_minimum_size = Vector2(80, 30)
 layout_mode = 3
 anchors_preset = 8
@@ -45,6 +47,14 @@ text = "Descrition of the intervention"
 
 [node name="DescriptionTimer" type="Timer" parent="." unique_id=1820021647]
 one_shot = true
+
+[node name="PanelCostLines" parent="." unique_id=664010856 instance=ExtResource("1_l3uth")]
+layout_mode = 0
+anchors_preset = 0
+anchor_right = 0.0
+offset_top = 0.0
+offset_bottom = 65.0
+grow_horizontal = 1
 
 [connection signal="button_down" from="Button" to="." method="_on_button_button_down"]
 [connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
