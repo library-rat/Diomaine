@@ -4,7 +4,7 @@ class_name Megafauna extends Manifestation
 
 func _ready() -> void:
 	manifestation_name = "Megafauna"
-	types[Enums.ElementType.ABUNDANCE] = 2
+	types = {Enums.ElementType.ABUNDANCE : 2}
 	cooldown = 90
 	description_text = "Augment Personal Might by 3"
 
