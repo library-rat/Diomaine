@@ -1,6 +1,6 @@
 extends Panel
 var cost_line = preload("res://Elements_UI/ElementUI/cost_line.tscn")
-
+var cost_lines_array = [null, null, null, null]
 
 func set_cost_lines(line_dico : Dictionary[Enums.ElementType,int]) :
 	for child in $VBoxContainer.get_children():
@@ -9,12 +9,22 @@ func set_cost_lines(line_dico : Dictionary[Enums.ElementType,int]) :
 		var new_line = cost_line.instantiate()
 		$VBoxContainer.add_child(new_line)
 		new_line.set_cost(line_dico[element], element)
+		cost_lines_array[element] = new_line
 	resize()
 
 func resize():
-	
 	var cost_line_num = $VBoxContainer.get_children().size()
 	if(cost_line_num):
 		size.y = 0
 	size.y = 20 + cost_line_num*15
 	position.y = -20 - cost_line_num*15
+
+func color_cost_lines(asserted_costs :Array[bool]):
+	for element in Enums.ElementType :
+		if (cost_lines_array[element]):
+			var new_color = Color.BROWN
+			if(asserted_costs[element]):
+				new_color = Color.WHITE
+			cost_lines_array[element].set_color(new_color)
+
+				

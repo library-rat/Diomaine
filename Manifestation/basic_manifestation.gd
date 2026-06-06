@@ -41,7 +41,7 @@ func check_elements() -> bool:
 		if ! god.check_element(type,types[type]):
 			return false
 	return true
-	
+
 func pay_cost_elements() -> void :
 	for type in types :
 		god.pay_cost_element(type,types[type])
@@ -57,6 +57,15 @@ func multiply_element(type :Enums.ElementType, value : int) -> void :
 	
 func multiply_global_element(type :Enums.ElementType, value : int) -> void :
 	god.multiply_global_element(type,value)
+
+func update_panel_cost():
+	var asserted_costs = []
+	for type in types :
+		if ! god.check_element(type,types[type]):
+			asserted_costs[type] = false
+		else :
+			asserted_costs[type] = true
+	
 
 func _on_button_button_down() -> void:
 	act()

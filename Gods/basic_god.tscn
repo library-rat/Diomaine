@@ -89,7 +89,7 @@ layout_mode = 2
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer" unique_id=907663830]
 layout_mode = 2
-columns = 3
+columns = 5
 
 [node name="BurningBush" parent="VBoxContainer/GridContainer" unique_id=1163845382 instance=ExtResource("2_ov470")]
 layout_mode = 2
