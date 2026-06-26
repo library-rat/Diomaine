@@ -36,7 +36,9 @@ func get_global_elements(type : Enums.ElementType) -> int :
 	return globalRessources.elements[type]
 
 func pay_cost_element(type :Enums.ElementType, value : int):
-	remove_element(type, value)
+	var diff = value - globalRessources.elements[type]
+	if ( diff >0 ):
+		remove_element(type, diff)
 
 func remove_global_element(type : Enums.ElementType, value : float):
 	globalRessources.elements[type] = max(0, globalRessources.elements[type] - value)
