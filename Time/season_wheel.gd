@@ -17,6 +17,8 @@ var timeCounter : float = 0
 @export var shortDayDuration : float = 0.05
 var currentDayDuration : float = longDayDuration
 
+signal new_day
+
 @export var Months : Array[BaseMonth]
 #@onready var Season : Array[BaseSeason] = [Spring.new(),Summer.new(),Autumn.new(),Winter.new()]
 #
@@ -48,7 +50,7 @@ func _on_new_day() -> void:
 		yDay = 1
 	update_cursor_position()
 	globalRessources.set_elements(Months[currentMonth].getElements())
-
+	new_day.emit()
 
 func update_cursor_position() ->void:
 	var currentAngle = float(yDay)/maxDay * 2*PI

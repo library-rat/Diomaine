@@ -45,16 +45,22 @@ func check_elements() -> bool:
 func pay_cost_elements() -> void :
 	for type in types :
 		god.pay_cost_element(type,types[type])
-		
+
+func get_self_element(type : Enums.ElementType) -> int :
+	return god.get_self_element(type)
+
 func add_element_self(type : Enums.ElementType, value : int) -> void:
 	god.add_element(type, value)
+
+func get_global_element(type : Enums.ElementType) -> int:
+	return god.get_global_elements(type)
 
 func remove_global_element(type : Enums.ElementType, value : int) -> void:
 	god.remove_global_element(type, value)
 
 func multiply_element(type :Enums.ElementType, value : int) -> void :
 	god.multiply_element(type,value)
-	
+
 func multiply_global_element(type :Enums.ElementType, value : int) -> void :
 	god.multiply_global_element(type,value)
 
@@ -65,7 +71,23 @@ func update_panel_cost():
 			asserted_costs[type] = false
 		else :
 			asserted_costs[type] = true
-	
+
+func color_cost_lines():
+	var color_array : Array[Color] =[Color.BLACK,Color.BLACK,Color.BLACK,Color.BLACK]
+	for element in types.keys() :
+		var global_elt = get_global_element(element)
+		if types[element] <= global_elt :
+			color_array[element] = Color.WHITE
+		else :
+			var self_elt = get_self_element(element)
+			if types[element] <= self_elt + global_elt :
+				color_array[element] = Color.GOLD
+			else :
+				color_array[element] = Color.DARK_VIOLET
+	panel_cost_lines.color_cost_lines(color_array)
+
+
+
 
 func _on_button_button_down() -> void:
 	act()

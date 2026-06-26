@@ -19,12 +19,9 @@ func resize():
 	size.y = 20 + cost_line_num*15
 	position.y = -20 - cost_line_num*15
 
-func color_cost_lines(asserted_costs :Array[bool]):
-	for element in Enums.ElementType :
+func color_cost_lines(new_colors :Array[Color]):
+	for element in Enums.ElementType.values() :
 		if (cost_lines_array[element]):
-			var new_color = Color.BROWN
-			if(asserted_costs[element]):
-				new_color = Color.WHITE
-			cost_lines_array[element].set_color(new_color)
+			cost_lines_array[element].set_color(new_colors[element])
 
 				

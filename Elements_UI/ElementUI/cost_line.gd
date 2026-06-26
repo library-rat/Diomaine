@@ -1,4 +1,4 @@
-extends HBoxContainer
+class_name CostLine extends HBoxContainer
 
 @onready var name_label = $Name
 

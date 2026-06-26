@@ -5,11 +5,13 @@ class_name God
 @onready var ManifestationContainer = $VBoxContainer/GridContainer
 @export var globalRessources : GlobalRessources
 @export var otherGod : God
+var manifestation_list : Array[Manifestation] = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	for child in ManifestationContainer.get_children() :
 		child.god = self 
+		manifestation_list.append(child)
 	elements_label.insert(Enums.ElementType.ABUNDANCE,$VBoxContainer/HBoxContainer/VBoxContainer/Abundance/Label)
 	elements_label.insert(Enums.ElementType.DEVASTATION,$VBoxContainer/HBoxContainer/VBoxContainer/Devastation/Label)
 	elements_label.insert(Enums.ElementType.MALICE,$VBoxContainer/HBoxContainer/VBoxContainer/Malice/Label)
@@ -43,6 +45,9 @@ func remove_global_element(type : Enums.ElementType, value : float):
 func add_global_element(type :Enums.ElementType, value : int):
 	globalRessources.elements[type] = globalRessources.elements[type] + value
 
+func get_self_element(type : Enums.ElementType) -> int :
+	return elements[type]
+
 func multiply_element(type :Enums.ElementType, value : int) -> void :
 	elements[type] = elements[type]*value
 	update_values()
@@ -50,3 +55,7 @@ func multiply_element(type :Enums.ElementType, value : int) -> void :
 func multiply_global_element(type :Enums.ElementType, value : int) -> void :
 	globalRessources.elements[type] = globalRessources.elements[type]*value
 	globalRessources.update_values()
+
+func _on_new_day() -> void :
+	for manifestation in manifestation_list :
+		manifestation.color_cost_lines()

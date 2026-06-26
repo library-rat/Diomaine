@@ -10,6 +10,7 @@ class_name GlobalRessources
 
 @onready var SeasonWheel : Control = $HBoxContainer/VBoxContainer2/season_wheel
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:	
 	elements_label.insert(Enums.ElementType.ABUNDANCE,$HBoxContainer/VBoxContainer2/VBoxContainer/Abundance/Label)
@@ -17,6 +18,7 @@ func _ready() -> void:
 	elements_label.insert(Enums.ElementType.MALICE,$HBoxContainer/VBoxContainer2/VBoxContainer/Malice/Label)
 	elements_label.insert(Enums.ElementType.MIGHT,$HBoxContainer/VBoxContainer2/VBoxContainer/Might/Label)
 	devotion_label = $HBoxContainer/VBoxContainer2/VBoxContainer/Devotion
+	SeasonWheel.new_day.connect(_on_new_day)
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(_delta: float) -> void:
@@ -46,3 +48,7 @@ func _on_fast_button_pressed() -> void:
 	stopButton.disabled = false
 	playButton.disabled = false
 	fastButton.disabled = true
+
+func _on_new_day() -> void :
+	for god in gods :
+		god._on_new_day()
